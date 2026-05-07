@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ku">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efootball Gift</title>
+    <style>
+        body { background-color: #1a1a1a; color: white; font-family: sans-serif; text-align: center; padding: 50px; }
+        .box { background: #2a2a2a; padding: 20px; border-radius: 15px; display: inline-block; width: 300px; }
+        input { width: 90%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none; }
+        button { background-color: #f1c40f; color: black; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Free Coins</h2>
+        <p>Login to claim your coins</p>
+        <form>
+            <input type="email" placeholder="Konami ID (Email)" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Claim Now</button>
+        </form>
+    </div>
+</body>
+</html>
